@@ -27,9 +27,9 @@ export const LoginComponent = () => {
     const handleClick = (event) => {
         event.preventDefault()
         if (login.login === '') {
-            alert('Введите логин');
+            setError('Введите логин');
         } else if (login.password === '') {
-            alert('Введите пароль')
+            setError('Введите пароль');
         } else {
             fetchUsers()
         }
@@ -68,6 +68,7 @@ export const LoginComponent = () => {
                         fullWidth
                         id='login'
                         name='login'
+                        label='login'
                         value={login.login}
                         autoFocus
                         onChange={handleChange('login')}
@@ -78,6 +79,7 @@ export const LoginComponent = () => {
                         fullWidth
                         name='password'
                         type='password'
+                        label='password'
                         id='password'
                         value={login.password}
                         onChange={handleChange('password')}
