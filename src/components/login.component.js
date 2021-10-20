@@ -44,7 +44,6 @@ export const LoginComponent = () => {
                 history.push('/user')
             }).catch((e) => {
             setError('Request error')
-            alert(error)
         })
     }
 
@@ -91,6 +90,7 @@ export const LoginComponent = () => {
                     >
                         Sign In
                     </Button>
+                    <p>{error}</p>
                 </Box>
             </Box>
         </Container>
