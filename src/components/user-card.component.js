@@ -1,24 +1,24 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import '../css/css.css'
+import '../css/general.css';
 
 export const UserCardComponent = () => {
     const user = useSelector((state) => state.users.user)
-    let history = useHistory()
+    const history = useHistory()
     const handleClick = () => {
         history.push('/')
-    }
+    };
 
     return (
         <div>
             <Button className='btnCard' variant='contained' size='medium' onClick={handleClick}>Back</Button>
-            <div className='card'><Card sx={{ maxWidth: 189 }}>
+            <div className='card'><Card sx={{maxWidth: 189}}>
                 <CardMedia
                     component='img'
                     height='160'
