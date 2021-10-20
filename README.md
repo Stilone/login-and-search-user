@@ -8,4 +8,6 @@
 
 ```
 npm i
+
+npm start
 ```
