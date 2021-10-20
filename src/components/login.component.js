@@ -27,9 +27,9 @@ export const LoginComponent = () => {
     const handleClick = (event) => {
         event.preventDefault()
         if (login.login === '') {
-            setError('Введите логин');
+            setError('Enter login');
         } else if (login.password === '') {
-            setError('Введите пароль');
+            setError('Enter Password');
         } else {
             fetchUsers()
         }
